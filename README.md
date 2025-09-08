@@ -1,12 +1,22 @@
 <<<<<<< HEAD
+
 # 🩺 Breast Cancer Prediction Model using Machine Learning
+
+---
+
+## 🆕 What's New (2025)
+
+- Improved code clarity and error handling in `app.py`
+- Prediction labels changed to 'Malignant' and 'Benign'
+- User input validation and error messages
+- Health check route (`/health`) added
+- Web interface now displays errors and clearer instructions
+- Updated result cards and messages for better user experience
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
 ![Flask](https://img.shields.io/badge/Flask-Web%20App-green?logo=flask)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
-
----
 
 ## 🚀 Project Overview
 
@@ -136,7 +146,8 @@ jupyter notebook "Breast Cancer Prediction using Machine Learning.ipynb"
 
 ---
 
-> 🧠 _This project demonstrates the power of machine learning in medical diagnostics and provides a user-friendly interface for real-world application._
-=======
+> # 🧠 _This project demonstrates the power of machine learning in medical diagnostics and provides a user-friendly interface for real-world application._
+
 # Brest_Cancer_Detection_Model
->>>>>>> d90078e9c7b07b538cbf381c2cf827cbb789e378
+
+> > > > > > > d90078e9c7b07b538cbf381c2cf827cbb789e378

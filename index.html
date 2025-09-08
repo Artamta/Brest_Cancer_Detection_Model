@@ -9,36 +9,44 @@
   <body style="background:black; color:white;">
 
   <div class="container my-3 mt-3">
+
       <h1 style="text-align:center">Breast Cancer Prediction Model</h1>
       <img style="width:100%; height:160px" src="{{ url_for('static', filename='images.jpg') }}" alt="My Image">
-          <form action="/predict" method="POST">
-            <div class="mb-3">
-              <label for="text" class="form-label">Input Breast Cancer Features</label>
-              <input type="text" class="form-control" id="number" name="feature" aria-describedby="emailHelp">
-            </div>
-            <button type="submit" class="btn btn-primary">Predict</button>
+      <form action="/predict" method="POST">
+        <div class="mb-3">
+          <label for="text" class="form-label">Enter 30 Breast Cancer Features (comma-separated):</label>
+          <input type="text" class="form-control" id="number" name="feature" aria-describedby="featureHelp" placeholder="e.g. 17.99,10.38,122.8,...">
+          <div id="featureHelp" class="form-text">Please enter exactly 30 numeric values separated by commas.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
       </form>
 
-         {% for i in message %}
-      <p>{{i}}</p>
-          {% if i=='Not Cancrouse' %}
+      {% if error %}
+        <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endif %}
+
+      {% if message %}
+        {% for i in message %}
+          <p class="mt-3">Prediction: <strong>{{i}}</strong></p>
+          {% if i=='Benign' %}
             <div class="card my-3 mt-3" style="width: 18rem;">
               <img src="{{url_for('static', filename='img2.jpg')}}" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Not Cancrouse</h5>
-                <p class="card-text">Don't Worry You don't have Breast Cancer Disease, Enjoy your life.</p>
+                <h5 class="card-title">Benign</h5>
+                <p class="card-text">No sign of breast cancer detected. Enjoy your life!</p>
               </div>
             </div>
           {% else %}
             <div class="card my-3 mt-3" style="width: 18rem;">
               <img src="{{url_for('static', filename='img1.png')}}" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Cancrouse</h5>
-                <p class="card-text">Alert You have a Breast Cancer Disease, check yourself by doctor.</p>
+                <h5 class="card-title">Malignant</h5>
+                <p class="card-text">Warning: Signs of breast cancer detected. Please consult a doctor.</p>
               </div>
             </div>
           {% endif %}
         {% endfor %}
+      {% endif %}
 
 
 
