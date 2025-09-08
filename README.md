@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🩺 Breast Cancer Prediction Model using Machine Learning
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
@@ -136,3 +137,6 @@ jupyter notebook "Breast Cancer Prediction using Machine Learning.ipynb"
 ---
 
 > 🧠 _This project demonstrates the power of machine learning in medical diagnostics and provides a user-friendly interface for real-world application._
+=======
+# Brest_Cancer_Detection_Model
+>>>>>>> d90078e9c7b07b538cbf381c2cf827cbb789e378
